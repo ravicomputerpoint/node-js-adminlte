@@ -1,0 +1,12 @@
+<%- include('../partials/header') -%>
+    <h3 class="mb-3">New Student</h3>
+    <form action="/student/store" method="post">
+        <label for="name">Student Name</label>
+        <input type="text" class="form-control my-2" name="name" placeholder="Enter student name">
+        <label for="father">Father Name</label>
+        <input type="text" class="form-control my-2" name="father" placeholder="Enter father name">
+        <label for="name">Mother Name</label>
+        <input type="text" class="form-control my-2" name="mother" placeholder="Enter mother name">
+        <input type="submit" value="Save" class="btn btn-success my-2">
+    </form>
+<%- include('../partials/footer') -%>

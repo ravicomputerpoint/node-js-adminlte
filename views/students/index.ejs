@@ -1,0 +1,37 @@
+<%- include('../partials/header') -%>
+    <h3 class="mb-3">Manage Students</h3>
+    <table class="table table-bordered table-dark table-striped">
+        <thead>
+            <tr>
+                <th>Sr</th>
+                <th>Name</th>
+                <th>Father</th>
+                <th>Mother</th>
+                <th>Show</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% var sr = 1 %>
+            <% students.forEach(student => { %>
+                <tr>
+                    <td><%= sr++ %></td>
+                    <td><%= student.name %></td>
+                    <td><%= student.father %></td>
+                    <td><%= student.mother %></td>
+                    <td>
+                        <a href="/student/show/<%= student.id %>" class="btn btn-primary">Show</a>
+                    </td>
+                    <td>
+                        <a href="/student/edit/<%= student.id %>" class="btn btn-warning">Edit</a>
+                    </td>
+                    <td>
+                        <a href="/student/delete/<%= student.id %>" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+<%- include('../partials/footer') -%>
+

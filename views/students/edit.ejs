@@ -1,0 +1,12 @@
+<%- include('../partials/header') -%>
+    <h3 class="mb-3">Edit Student</h3>
+    <form action="/student/update/<%= student.id %>" method="post">
+        <label for="name">Student Name</label>
+        <input type="text" class="form-control my-2" name="name" placeholder="Enter student name" value="<%= student.name %>">
+        <label for="father">Father Name</label>
+        <input type="text" class="form-control my-2" name="father" placeholder="Enter father name" value="<%= student.father %>">
+        <label for="name">Mother Name</label>
+        <input type="text" class="form-control my-2" name="mother" placeholder="Enter mother name" value="<%= student.mother %>">
+        <input type="submit" value="Update" class="btn btn-warning my-2">
+    </form>
+<%- include('../partials/footer') -%>

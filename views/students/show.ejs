@@ -1,0 +1,21 @@
+<%- include('../partials/header') -%>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h3 class="mb-3">Show Student</h3>
+        <a href="/students" class="btn btn-danger">Back</a>
+    </div>
+    <table class="table table-bordered table-dark table-striped">
+            <tr>
+                <th>Name</th>
+                <td><%= student.name %></td>
+            </tr>
+            <tr>
+                <th>Father</th>
+                <td><%= student.father %></td>
+            </tr>
+            <tr>
+                <th>Mother</th>
+                <td><%= student.mother %></td>
+            </tr>
+    </table>
+<%- include('../partials/footer') -%>
+
