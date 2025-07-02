@@ -1,0 +1,8 @@
+<%- include('../partials/header') -%>
+    <h3 class="mb-3">Edit Grade</h3>
+    <form action="/grades/update/<%= grade.id %>" method="post">
+        <label for="name">Grade Name</label>
+        <input type="text" class="form-control my-2" name="name" placeholder="Enter garde name" value="<%= grade.name %>">
+        <input type="submit" value="Update" class="btn btn-warning my-2">
+    </form>
+<%- include('../partials/footer') -%>

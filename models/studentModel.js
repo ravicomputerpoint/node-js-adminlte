@@ -10,8 +10,11 @@ db.run(`
 `)
 
 module.exports = {
-    getTotal: (callback) => {
+    getTotalStudents: (callback) => {
         db.get('select count(*) as total_students from students',callback)
+    },
+    getTotalGrades: (callback) => {
+        db.get('select count(*) as total_grades from grades',callback)
     },
     getAll: (callback) => {
         db.all('select * from students',callback)

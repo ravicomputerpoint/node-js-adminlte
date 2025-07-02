@@ -1,0 +1,33 @@
+<%- include('../partials/header') -%>
+    <h3 class="mb-3">Manage Grades</h3>
+    <table class="table table-bordered table-dark table-striped">
+        <thead>
+            <tr>
+                <th>Sr</th>
+                <th>Name</th>
+                <th>Show</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% var sr = 1 %>
+            <% grades.forEach(grade => { %>
+                <tr>
+                    <td><%= sr++ %></td>
+                    <td><%= grade.name %></td>
+                    <td>
+                        <a href="/grades/show/<%= grade.id %>" class="btn btn-primary">Show</a>
+                    </td>
+                    <td>
+                        <a href="/grades/edit/<%= grade.id %>" class="btn btn-warning">Edit</a>
+                    </td>
+                    <td>
+                        <a href="/grades/delete/<%= grade.id %>" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+<%- include('../partials/footer') -%>
+

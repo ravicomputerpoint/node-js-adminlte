@@ -10,6 +10,9 @@ db.run(`
 `)
 
 module.exports = {
+    getTotal: (callback) => {
+      db.get('select count(*) from students',callback)  
+    },
     getAll: (callback) => {
         db.all('select * from grades',callback)
     },
@@ -20,7 +23,7 @@ module.exports = {
         db.run('insert into grades(name) values(?)',data,callback)
     },
     update: (data, callback) => {
-        db.run('update grades set name = ?',data,callback)
+        db.run('update grades set name = ? where id = ?',data,callback)
     },
     delete: (id, callback) => {
         db.run('delete from grades where id = ?',[id],callback)
