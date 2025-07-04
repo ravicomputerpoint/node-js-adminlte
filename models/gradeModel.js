@@ -1,14 +1,6 @@
 const sqlite3 = require('sqlite3').verbose()
 const db = new sqlite3.Database('./database.db')
 
-db.run(`
-    create table if not exists grades(
-        id integer primary key autoincrement,
-        name text,
-        fees integer
-    )    
-`)
-
 module.exports = {
     getTotal: (callback) => {
       db.get('select count(*) from students',callback)  

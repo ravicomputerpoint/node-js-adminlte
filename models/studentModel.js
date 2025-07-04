@@ -1,13 +1,5 @@
 const sqlite3 = require('sqlite3').verbose()
 const db = new sqlite3.Database('./database.db')
-db.run(`
-    CREATE TABLE IF NOT EXISTS students(
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        name TEXT,
-        father TEXT,
-        mother TEXT
-    )    
-`)
 
 module.exports = {
     getTotalStudents: (callback) => {
