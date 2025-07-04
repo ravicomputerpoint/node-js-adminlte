@@ -32,3 +32,6 @@ Clone the repository
 ## 📄 License
 ### This project is open source.
 
+## Thanks to adminlte
+### A very speical thanks to adminlte because of them nothing is possible
+
