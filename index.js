@@ -18,5 +18,5 @@ app.use('/grades',gradeRoutes)
 
 //Server starting
 app.listen(3000,()=>{
-    console.log('Server started successfully on port 3000')
+    console.log(`Server started successfully on http://localhost:${3000}`)
 })
